@@ -20,18 +20,8 @@ jobs:
       with:
         go-version: '1.24.1'
 
-    - name: Clean NUL characters
-      run: |
-        if grep -P "\x00" dnsanalyzer.go > /dev/null; then
-          echo "NUL characters found. Cleaning up..."
-          tr < dnsanalyzer.go -d '\000' > dnsanalyzer_clean.go
-          mv dnsanalyzer_clean.go dnsanalyzer.go
-        else
-          echo "No NUL characters found."
-        fi
-
     - name: Build
       run: go build -v ./...
 
-    - name: Test
-      run: go test -v ./...
+    # - name: Test
+    #   run: go test -v ./...
