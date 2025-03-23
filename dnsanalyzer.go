@@ -1184,7 +1184,7 @@ func (a *DNSAnalyzer) detectTechnologies() {
     webTechPatterns := map[string]string{
         "HTML5":           `<!DOCTYPE html>`,
         "CSS3":            `@media|@font-face|@keyframes`,
-        "Web Fonts":       `fonts.googleapis.com|font-family`,
+        "Web Fonts":       `fonts\.googleapis\.com|font-family`,
         "Responsive Design": `@media \(max-width|viewport`,
         "AJAX":           `XMLHttpRequest|fetch\(`,
         "JSON":           `application/json|JSON\.parse`,
